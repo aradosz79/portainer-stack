@@ -1,0 +1,27 @@
+version: 2
+
+services:
+ influxdb:
+  image: influxdb:latest
+  ports:
+     - "8086:8086"
+  restart: always 
+ grafana:
+  image: grafana/grafana:latest
+  ports:
+     - "3000:3000"
+  volumes:
+     - "/mnt/d/docker/grafana:/var/lib/grafana"
+  restart: always 
+ loki:
+  image: graylog/graylog:3.0
+  ports:
+     - "3100:3100"
+  registry:
+   image: registry:2
+   ports:
+     - "5000:5000"
+   volumes:
+     - "/mnt/d/docker/registry:/var/lib/registry/"
+ l restart: always
+    
