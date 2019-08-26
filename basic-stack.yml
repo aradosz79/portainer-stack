@@ -23,5 +23,5 @@ services:
      - "5000:5000"
    volumes:
      - "/mnt/d/docker/registry:/var/lib/registry/"
- l restart: always
+   restart: always
     
