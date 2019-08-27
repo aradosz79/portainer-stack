@@ -11,7 +11,7 @@ services:
   ports:
      - "3000:3000"
   volumes:
-     - "/mnt/d/docker/grafana:/var/lib/grafana"
+     - "/mnt/d/docker/grafana:/var/lib/grafana/"
   restart: always 
  loki:
   image: grafana/loki:latest
