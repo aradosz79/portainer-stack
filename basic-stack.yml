@@ -17,11 +17,11 @@ services:
   image: graylog/graylog:3.0
   ports:
      - "3100:3100"
-  registry:
-   image: registry:2
-   ports:
+ registry:
+  image: registry:2
+  ports:
      - "5000:5000"
-   volumes:
+  volumes:
      - "/mnt/d/docker/registry:/var/lib/registry/"
-   restart: always
+  restart: always
     
