@@ -1,29 +1,16 @@
 version: 2
 
 services:
- mongo:
-  image: mongo:3
+ humio:
+  image:  humio/humio
   ports:
-     - "27017:27017"
+     - "8090:8080"
+  volumes:
+   - "/mnt/d/docker/humio:/data"
+   - "/mnt/d/docker/kafka-data:/data/kafka-data"
+  ulimits:
+    nofile: 
+     soft: 8192
+     hard: 8192
   restart: always 
-
- elasticsearch:
-  image: docker.elastic.co/elasticsearch/elasticsearch-oss:7.3.1
-  ports:
-     - "9200:9200"
-     - "9300:9300"
-  environment:
-    - discovery.type="single-node"
-  restart: always 
-
- graylog:
-  image: graylog/graylog:3.0
-  ports:
-     - "9001:9000"
-     - "12201:12201"
-     - "1514:1514"
-  environment:
-    GRAYLOG_ELASTICSEARCH_HOSTS: "http://elasticsearch:9200/"
-#    - GRAYLOG_HTTP_EXTERNAL_URI="http://localhost:9000/" 
-  restart: always   
  
