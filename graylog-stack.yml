@@ -22,5 +22,5 @@ services:
      - "12201:12201"
      - "1514:1514"
   environment:
-    - GRAYLOG_HTTP_EXTERNAL_URI="http://127.0.0.1:9000/" 
+    - GRAYLOG_HTTP_EXTERNAL_URI="http://127.0.0.1:9001/" 
   restart: always   
