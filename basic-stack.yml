@@ -14,7 +14,7 @@ services:
      - "/mnt/d/docker/grafana:/var/lib/grafana"
   restart: always 
  loki:
-  image: graylog/graylog:3.0
+  image: grafana/loki:latest
   ports:
      - "3100:3100"
  registry:
