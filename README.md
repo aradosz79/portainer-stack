@@ -26,7 +26,16 @@ Then using web browser go Portainer>LOCAL>Stacks>Add Stack. Select name "CI/CD S
 
 Push 'Deploy the stack' button. Now go http://localhost:3000 and configure access to Grafana using admin/admin credentials.
 
-# Install graylog stack
+# Install humio stack
 
-Go to Portainer> LOCAL > Stack and Add new Stack. Select name "Gray Stack" and copy content of [graylog-stack.yml](graylog-stack.yml)
+Before installing stack file for Humio please create directories to store his data:
+
+
+```
+D:
+cd \docker
+mkdir humio kafka-data
+```
+
+Go to Portainer> LOCAL > Stack and Add new Stack. Select name "Humio Stack" and copy content of [humio-stack.yml](humio-stack.yml)
 
