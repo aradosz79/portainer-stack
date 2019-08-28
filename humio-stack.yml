@@ -1,15 +1,14 @@
 version: 2
 
 services:
- humio:
-  image:  humio/humio
+ splunk:
+  image:  splunk/splunk:latest
   ports:
-     - "8090:8080"
+     - "8000:8001"
+     - "8089:8089"
+  environment:
+   - SPLUNK_START_ARGS= "--accept-license"
+   - SPLUNK_PASSWORD= "<password>"
   volumes:
-   - "/mnt/d/docker/humio:/data"
-   - "/mnt/d/docker/kafka-data:/data/kafka-data"
-  ulimits:
-    nofile: 
-     soft: 8192
-     hard: 8192
+   - "/mnt/d/docker/splunk:/opt/splunk/var"
   restart: always 
