@@ -24,4 +24,16 @@ services:
   volumes:
      - "/mnt/d/docker/registry:/var/lib/registry/"
   restart: always
+ splunk:
+  image:  splunk/splunk:latest
+  ports:
+     - "8001:8000"
+     - "8089:8089"
+  environment:
+   - SPLUNK_START_ARGS= "--accept-license"
+   - SPLUNK_PASSWORD= "<password>"
+  volumes:
+    - splunk:"/opt/splunk/var"
+    - splunk-etc:"/opt/splunk/etc"
+  restart: always 
     
