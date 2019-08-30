@@ -11,16 +11,30 @@ docker run -d -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.
 
 Now visit http://localhost:9000 and setup your administrative account using admin/admin credentials.
 
-# Install basic stack
+# Install Docker Registry
 
-To install basic stack first you need prepare a docker directory on the Windows drive d:
+Now it is time to install our own private Docker registry. Execute following in the cmd:
 
 ```
 D:
 cd \
 mkdir docker
 cd docker
-mkdir registry grafana
+mkdir grafana
+```
+
+Then using web browser go to Portainer>LOCAL>Stacks>Add Stack. Select name "registry" and copy content of [registry-stack.yml](registry-stack.yml). Push 'Deploy the stack' button.
+
+# Install puma stack
+
+To install Puma monitoring stack first you need prepare a docker directory on the Windows drive d:
+
+```
+D:
+cd \
+mkdir docker
+cd docker
+mkdir grafana
 ```
 Then using web browser go Portainer>LOCAL>Stacks>Add Stack. Select name "cicd" and copy content of [basic-stack.yml](basic-stack.yml) changing password to Splunk.
 
