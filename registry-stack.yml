@@ -1,0 +1,9 @@
+version: 2
+registry:
+  image: registry:2
+  ports:
+     - "5000:5000"
+  volumes:
+     - "/mnt/d/docker/registry:/var/lib/registry/"
+  restart: always
+ 
