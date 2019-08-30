@@ -22,20 +22,6 @@ mkdir docker
 cd docker
 mkdir registry grafana
 ```
-Then using web browser go Portainer>LOCAL>Stacks>Add Stack. Select name "CI/CD Stack" and copy content of [basic-stack.yml](basic-stack.yml)
+Then using web browser go Portainer>LOCAL>Stacks>Add Stack. Select name "cicd" and copy content of [basic-stack.yml](basic-stack.yml) changing password to Splunk.
 
 Push 'Deploy the stack' button. Now go http://localhost:3000 and configure access to Grafana using admin/admin credentials.
-
-# Install humio stack
-
-Before installing stack file for Humio please create directories to store his data:
-
-
-```
-D:
-cd \docker
-mkdir humio kafka-data
-```
-
-Go to Portainer> LOCAL > Stack and Add new Stack. Select name "Humio Stack" and copy content of [humio-stack.yml](humio-stack.yml)
-
