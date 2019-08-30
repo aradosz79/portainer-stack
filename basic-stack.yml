@@ -33,7 +33,7 @@ services:
    - SPLUNK_START_ARGS= "--accept-license"
    - SPLUNK_PASSWORD= "<password>"
   volumes:
-    - splunk:"/opt/splunk/var"
-    - splunk-etc:"/opt/splunk/etc"
+    - splunk:/opt/splunk/var
+    - splunk-etc:/opt/splunk/etc
   restart: always 
     
