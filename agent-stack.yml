@@ -13,3 +13,4 @@ services:
         published: 9001
         protocol: tcp
         mode: host
+    restart: always
