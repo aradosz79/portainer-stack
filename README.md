@@ -40,7 +40,7 @@ Then using web browser go Portainer>LOCAL>Stacks>Add Stack. Select name "cicd" a
 
 Push 'Deploy the stack' button. Now go http://localhost:3000 and configure access to Grafana using admin/admin credentials.
 
-#Install portainer agent
+# Install portainer agent
 
 To install portainer agent on the linux host please execute following script:
 
