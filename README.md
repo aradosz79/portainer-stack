@@ -39,3 +39,15 @@ mkdir grafana
 Then using web browser go Portainer>LOCAL>Stacks>Add Stack. Select name "cicd" and copy content of [basic-stack.yml](basic-stack.yml) changing password to Splunk.
 
 Push 'Deploy the stack' button. Now go http://localhost:3000 and configure access to Grafana using admin/admin credentials.
+
+#Install portainer agent
+
+To install portainer agent on the linux host please execute following script:
+
+```
+wget https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)
+chmod d+x docker-compose-Linux-x86_64    
+mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
+wget https://github.com/aradosz79/portainer-stack/raw/master/agent-stack.yml
+docker-compose  -f ./agent-stack.yml up -d   
+```
