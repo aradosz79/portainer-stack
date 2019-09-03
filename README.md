@@ -46,8 +46,8 @@ To install portainer agent on the linux host please execute following script:
 
 ```
 wget https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)
-chmod d+x docker-compose-Linux-x86_64    
-mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
-wget https://github.com/aradosz79/portainer-stack/raw/master/agent-stack.yml
+chmod a+x docker-compose-Linux-x86_64    
+mv docker-compose-Linux-x86_64 /usr/local/bin/docker-compose 
+wget https://raw.githubusercontent.com/aradosz79/portainer-stack/master/agent-stack.yml
 docker-compose  -f ./agent-stack.yml up -d   
 ```
