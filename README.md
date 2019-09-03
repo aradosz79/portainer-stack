@@ -6,7 +6,7 @@ Files to run full CI/CD stack
 First install Portainer using docker image. Please use following commands:
 ```
 docker volume create portainer_data
-docker run -d -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+docker run --restart always -d -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 ```
 
 Now visit http://localhost:9000 and setup your administrative account using admin/admin credentials.
